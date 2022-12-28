@@ -1,0 +1,20 @@
+<apex:page standardStylesheets="false">
+    <apex:stylesheet value="https://fonts.googleapis.com/icon?family=Material+Icons"/>
+    <apex:stylesheet value="{!URLFOR($Resource.materialize, 'materialize/css/materialize.css')}"/>
+    <apex:includeScript value="{!URLFOR($Resource.materialize, 'materialize/js/materialize.js')}"/>
+    <h1>   <nav>
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo">Clarusway</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="sass.html">Sass</a></li>
+        <li><a href="badges.html">Components</a></li>
+        <li><a href="collapsible.html">JavaScript</a></li>
+      </ul>
+    </div>
+  </nav> </h1>
+    <i class="material-icons">access_alarm</i>
+    <a class="waves-effect waves-light btn">button</a>
+    <a class="waves-effect waves-light btn"><i class="material-icons left">cloud</i>button</a>
+    <a class="waves-effect waves-light btn"><i class="material-icons right">cloud</i>button</a>
+    <img src=" https://clarusway.com/wp-content/uploads/2022/07/clarusway-logo-classic.jpg"/>
+</apex:page>

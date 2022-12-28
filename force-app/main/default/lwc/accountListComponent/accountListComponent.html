@@ -1,0 +1,20 @@
+<template>
+    <lightning-card  variant="Narrow"  title="LWC : Account List" 
+    icon-name="standard:account">
+ 
+    <lightning-input type="text" value={search} label="Account Search" onchange={inputChangeHandler} >
+    </lightning-input>
+    <template if:true={accounts.data}>
+ 
+      <template for:each={accounts.data} for:item="record">
+        <p class="slds-p-horizontal_small" key={record.Id}>
+          {record.Id} {record.Name} {record.Phone}</p>
+      </template>
+    </template>
+    <template if:true={accounts.error}>
+        <p class="slds-p-horizontal_small">
+        No data Received</p>
+    </template>
+      <p slot="footer">Card Footer</p>
+    </lightning-card>
+</template>

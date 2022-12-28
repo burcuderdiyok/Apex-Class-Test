@@ -1,0 +1,15 @@
+<template>
+    <lightning-card  title="Parent Component">
+        <lightning-button label="New" slot="actions" onclick={clickHandle}></lightning-button>
+        <p class="slds-p-horizontal_small">
+
+            <lightning-input type="text" label="Enter some text" value={parentInput} onchange={onChangeHandler}>
+
+            </lightning-input>
+        </p>
+
+        <c-child-component parent-message={message} ></c-child-component>
+
+        <p slot="footer">Parent Component</p>
+    </lightning-card>
+</template>

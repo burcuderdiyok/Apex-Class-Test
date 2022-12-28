@@ -1,0 +1,12 @@
+<apex:page standardStylesheets="false">
+     
+    <apex:stylesheet value="https://fonts.googleapis.com/icon?family=Material+Icons"/> 
+    <apex:stylesheet value="{!URLFOR($Resource.mat, '/css/mat.css')}"/>
+    <apex:includeScript value="{!URLFOR($Resource.mat, '/js/mat.js')}"/>
+      
+   
+<h1> hello </h1>
+<a class="waves-effect waves-light btn">button</a>
+<a class="waves-effect waves-light btn"><i class="material-icons left">cloud</i>button</a>
+<a class="waves-effect waves-light btn"><i class="material-icons right">cloud</i>button</a>
+</apex:page>

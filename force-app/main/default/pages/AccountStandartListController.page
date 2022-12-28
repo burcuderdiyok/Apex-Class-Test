@@ -1,0 +1,56 @@
+<apex:page standardController="Lead" recordSetVar="multilead" lightningStylesheets="true" >
+    
+    <apex:form >
+        
+        <apex:panelgrid columns="2">
+            
+            <apex:outputText >List View</apex:outputText>
+            
+            <apex:selectList value="{!filterid}" size="1">
+                
+                <apex:actionSupport event="onchange" reRender="multi_table"/>
+                <apex:selectOptions value="{!listviewoptions}"> </apex:selectOptions>
+                <!-- <apex:commandButton Value="Go" action="{!list}"/> -->
+                
+            </apex:selectList>
+            
+        </apex:panelgrid>     
+        <apex:pageBlock title="Leads" mode="edit">
+            
+            
+            <apex:datalist value="{!multilead}" var="single" id="multi_table">
+                
+                <apex:pageblockSection columns="4">
+                    <apex:inputField value="{!single.FirstName}"/>
+                    <apex:inputField value="{!single.LastName}"/>
+                    <apex:inputField value="{!single.Company}"/>
+                    <apex:inputField value="{!single.Phone}"/>
+                </apex:pageblockSection>
+                
+                
+                
+            </apex:datalist>
+            
+            
+            
+            
+            <apex:pageblockButtons >
+                
+                <apex:commandButton value="⏮" action="{!first}"/>
+                <apex:commandButton value="◀️" action="{!previous}"/>
+                
+                <apex:commandButton value="" action="{!quicksave}"/>
+                
+                
+                <apex:commandButton value="▶️" action="{!next}"/>
+                <apex:commandButton value="⏭️" action="{!last}"/>
+                
+                
+            </apex:pageblockButtons>
+            
+            
+            
+        </apex:pageBlock>
+        
+    </apex:form>
+</apex:page>

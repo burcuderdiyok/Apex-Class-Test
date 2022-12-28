@@ -1,0 +1,23 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" 
+                
+                
+                controller="helloCohort2ServerController"
+                >
+    
+    <aura:attribute name="numX" type="Decimal" />
+    <aura:attribute name="numY" type="Decimal" />
+    <aura:attribute name="result" type="Decimal" />
+    <aura:attribute name="errorMsg" type="String" default=""/>
+    
+    
+    
+    <ui:inputNumber label="First Num " aura:id="numberX" value="{!v.numX}" />
+    <ui:inputNumber label="Second Num " aura:id="numberY" value="{!v.numY}" />
+    
+    <ui:button label="+" press="{!c.calculate}" class="button" />    
+    
+        <h1>  {!v.result} {!v.errorMsg} </h1>
+    
+     
+    
+</aura:component>

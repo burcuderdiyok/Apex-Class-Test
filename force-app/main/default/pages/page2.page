@@ -1,0 +1,15 @@
+<apex:page standardStylesheets="false" >
+<form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
+<input type="hidden" name="captcha_settings" value='{"keyname":"googlev2","fallback":"true","orgId":"00D4x000007sJLd","ts":""}'></input>
+<input type="hidden" name="oid" value="00D4x000007sJLd"></input>
+<input type="hidden" name="retURL" value="https://clarusway.com/free-programs/"></input>
+<label for="first_name">First Name</label><input  id="first_name" maxlength="40" name="first_name" size="20" type="text" ></input><br/>
+<label for="last_name">Last Name</label><input  id="last_name" maxlength="80" name="last_name" size="20" type="text" ></input><br/>
+<label for="email">Email</label><input  id="email" maxlength="80" name="email" size="20" type="text" ></input><br/>
+<label for="company">Company</label><input  id="company" maxlength="40" name="company" size="20" type="text" ></input><br/>
+<label for="city">City</label><input  id="city" maxlength="40" name="city" size="20" type="text" ></input><br/>
+<label for="phone">Phone</label><input  id="phone" maxlength="40" name="phone" size="20" type="text" ></input><br/>
+<div class="g-recaptcha" data-sitekey="6LfieosiAAAAAB9vz0j3beH7VmCXXTzE4i0NmYgg"></div><br/>
+<input type="submit" name="submit"></input>
+</form>
+</apex:page>

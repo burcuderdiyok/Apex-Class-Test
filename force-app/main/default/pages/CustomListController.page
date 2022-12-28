@@ -1,0 +1,41 @@
+<apex:page standardController="Account" extensions="customListController" lightningStylesheets="true">
+
+{!account.Id}
+<apex:form >
+    <apex:pageBlock title="Account">
+        <apex:pageBlockSection >
+            <apex:inputField value="{!account.name}"/>
+            <apex:inputField value="{!account.Phone}"/>
+            <apex:commandButton value="Save" action="{!quicksave}"/>
+</apex:pageBlockSection>
+
+</apex:pageBlock>
+</apex:form>
+ 
+ <apex:form >
+         <apex:pageblock title="Opportunity List"  >
+         <apex:pageBlockSection columns="1" title="search">
+        <apex:inputText value="{!searchTerms}"/>
+        <apex:commandButton value="Search" action="{!searchHandler}"/>
+         </apex:pageBlockSection>
+         
+         <apex:pageBlockSection columns="1" title="search result">
+        
+
+         
+             <apex:pageBlockTable value="{!multiOp}" var="single">
+             
+                 <apex:column value="{!single.Name}"/>
+                 <apex:column value="{!single.Accountid}"/>
+                                                 <apex:inputField value="{!account.Industry}"/>
+                                <apex:inputField value="{!account.Website}"/>
+
+              
+             
+             </apex:pageBlockTable>
+         </apex:pageBlockSection>
+         </apex:pageblock>
+  
+ </apex:form>
+ 
+</apex:page>
